@@ -1,0 +1,52 @@
+BUG 1
+Ścieżka: https://demo.saleor.io/ >> GROCERIES >> JUICES
+Problem: 
+pineapple juice posiada grafikę przedstawiającą power juice
+apple juice posiada grafikę przedstawiającą orange juice
+coconut juice posiada grafikę przedstawiającą bean juice
+
+BUG 2
+Ścieżka: https://demo.saleor.io/ >> stopka strony >> odnośnik do “GraphQL API” 
+Problem: po kliknięciu użytkownik jest kierowany do localhosta (http://localhost:8000/graphql/) zamiast na podstronę z API
+
+BUG 3:
+Ścieżka: https://demo.saleor.io/ >> stopka strony >>  odnośnik “About” >> treść strony “About”
+Problem: po przejściu do sekcji “About” podtytuł h2 “A modular, high performance e-commerce storefront built with GraphQL, Django, and ReactJS.” dolna linijka podtytułu nachodzi na górną 
+
+BUG 4:
+Ścieżka:  https://demo.saleor.io/  >> accessories >> paints >> widok katalogu produktów
+Problem: grafiki farb są źle renderowane przez co w widoku katalogu są niewyraźne
+
+BUG 5 :
+Ścieżka:  https://demo.saleor.io/  >> kliknij w odnośnik “Explore store’s dashboard >> kliknij “logowanie” nie zmieniając danych podanych w loginie i haśle
+Problem: każdy użytkownik może się zalogować do panelu sklepu
+
+BUG 6:
+Ścieżka:  https://demo.saleor.io/  >> kliknij ikonę użytkownika/ludzika >> zaloguj się jako użytkownik >> przejdź do “My account” >> Account >> kliknij ikonę edycji (ołówek z kartką) >> wpisz imię i nazwisko w odpowiednich polach >> zatwierdź klikając save
+Problem: nie da się zapisać zmiany imienia i nazwiska
+
+BUG 7: 
+Ścieżka:  https://demo.saleor.io/  >> kliknij ikonę użytkownika/ludzika >> zaloguj się jako użytkownik >> przejdź do “My account” >> Account >> My Password >> kliknij ikonę edycji (ołówka z karteczką) >> uzupełnij pola “old password”, “new password” i “confirm password” 
+Problem: niezależnie czy uzupełnimy pola identycznymi danymi, czy “old password” prawidłowym i innym hasłem niż te podane w “new password” i “confirm password”, po zatwierdzeniu zmiany przez kliknięcie “save”, system wyświetla błąd “An unexpected error has occured” 
+
+
+
+BUG 8: 
+Ścieżka:  https://demo.saleor.io/  >> kliknij ikonę użytkownika/ludzika >> zaloguj się jako użytkownik >> przejdź do “My account” >> Address book >> kliknij w kafelek “Add new address” 
+Problem 1: w formularzu dodawania nowego adresu pole “country” 
+a/ ma label u góry pola, zanim zostanie rozwinięte, 
+b/ posiada również treść podpowiedzi “United States of America”, zamiast zgodnie z konwencją formularza podpowiedź np. “Country”, 
+c/ strzałka rozwijająca listę rozwijaną nachodzi na treść zawartą w tym polu
+d/ lista rozwijana nie posiada żadnych dostępnych opcji
+
+BUG 9: 
+Ścieżka:  https://demo.saleor.io/  >> kliknij ikonę użytkownika/ludzika >> zaloguj się jako użytkownik >> przejdź do “My account” >> Address book >> kliknij w kafelek “Add new address” >> uzupełnij wszystkie dane i zatwierdź klikając “Add”
+Problem: system wyświetla błąd “An unexpected error has occured” zamiast zwalidować i zapisać dane z formularza
+
+BUG 10: 
+Ścieżka:  https://demo.saleor.io/ >> dodaj produkty do koszyka np. z kategorii juices >> przejdź do koszyka >> wybierz adres dostawy i adres do dokumentu sprzedaży >> następnie wybierz metodę dostawy >> następnie na etapie “payment” zaznacz checkbox przy “Do you have a gift card voucher or discount code?” i wpisz kod zniżkowy np. DISCOUNT >> zatwierdź klikając “apply”
+Problem: wartość zamówienia się nie obniża po zaaplikowaniu kodu zniżkowego
+
+BUG 11: 
+Ścieżka:  https://demo.saleor.io/ >> dodaj produkty do koszyka np. z kategorii juices >> przejdź do koszyka >> wybierz adres dostawy i adres do dokumentu sprzedaży >> następnie wybierz metodę dostawy >> następnie na etapie “payment” zaznacz opcję”dummy”
+Problem: pojawia się lista innych metod, ale po ich zaznaczeniu “dummy” nadal jest również wybrane, oprócz tego kropka w zaznaczonych radio buttonach nie jest wyświetlana centralnie, a mimo wybrania metody zatwierdzenie jej przez “continue to review” nie przenosi do kroku z podsumowaniem
